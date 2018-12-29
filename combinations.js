@@ -5,7 +5,7 @@ Return all possible combinations of N number of item,
 for given array. 
 */
 
-const arr = [1, 2, 2, 3];
+const arr = [1, 2, 2, 2, 3];
 const N = 3;
 
 function getAllCombinations(arr, N) {
