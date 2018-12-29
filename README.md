@@ -1,6 +1,7 @@
 # Algorithm With JavaScript
 
-1. mergeSort.js: Merge Sort in JS.
-2. binarySearch.js: Binary Search in JS.
-3. mapWithReduce.js: map function created with reduce method.
-4. variance.js: Variance algorithm in JS.
+## general
+1. binarySearch.js: Binary Search in JS.
+2. mapWithReduce.js: map function created with reduce method.
+3. variance.js: Variance algorithm in JS.
+4. combinations: Get all possible combinations from given arr.
