@@ -3,13 +3,11 @@
 function mergeSort(arr) {
   function divide(lo, hi) {
     if (lo === hi) return;
-    mid = parseInt((lo + hi) / 2);
+    let mid = parseInt((lo + hi) / 2);
     divide(lo, mid);
     divide(mid + 1, hi);
-
     merge(lo, mid, hi);
   }
-
   function merge(lo, mid, hi) {
     let left = lo;
     let right = mid + 1;
@@ -22,8 +20,9 @@ function mergeSort(arr) {
         temp.push(arr[right]);
         right += 1;
       }
-      arr.splice(lo, hi - lo, ...temp);
     }
+
+    arr.splice(lo, hi - lo + 1, ...temp);
   }
   divide(0, arr.length - 1);
   return arr;
