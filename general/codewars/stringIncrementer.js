@@ -28,17 +28,16 @@ function incrementString(string) {
   }
   prefix = string.slice(0, idx + 1);
   const prevLength = suffix.length;
+  let zeros = "";
   suffix = String(Number(suffix) + 1);
   if (suffix.length < prevLength) {
-    let zeros = "";
     for (let j = 0; j < prevLength - suffix.length; j++) zeros += "0";
-    suffix = zeros + suffix;
   }
-  return prefix + suffix;
+  return prefix + zeros + suffix;
 }
 console.log(incrementString("foobar000"));
-// console.log(incrementString("foobar99"));
-// console.log(incrementString("foo0042"));
-// console.log(incrementString("foo099"));
-// console.log(incrementString("foo"));
-// console.log(incrementString("1"));
+console.log(incrementString("foobar99"));
+console.log(incrementString("foo0042"));
+console.log(incrementString("foo099"));
+console.log(incrementString("foo"));
+console.log(incrementString("1"));
