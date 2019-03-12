@@ -12,6 +12,7 @@
 and returns a list of items without any elements 
 with the same value next to each other 
 and preserving the original order of elements.
+1. stringIncrementer.js: Your job is to write a function which increments a string, to create a new string. If the string already ends with a number, the number should be incremented by 1. If the string does not end with a number the number 1 should be appended to the new string.
 ---
 ## sort
 1. mergeSort.js: Sort algorithm that has time complexity of O(lgn). Uses divide and conquer.
