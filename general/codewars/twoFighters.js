@@ -16,34 +16,27 @@
 // Both health and damagePerAttack (damage_per_attack for python)
 // will be integers larger than 0. You can mutate the Fighter objects.
 
-function Fighter(name, health, damagePerAttack) {
-  this.name = name;
-  this.health = health;
-  this.damagePerAttack = damagePerAttack;
-  this.toString = function() {
-    return this.name;
-  };
-}
+module.exports = {
+  Fighter: function(name, health, damagePerAttack) {
+    this.name = name;
+    this.health = health;
+    this.damagePerAttack = damagePerAttack;
+    this.toString = function() {
+      return this.name;
+    };
+  },
+  declareWinner: function(fighter1, fighter2, firstAttacker) {
+    const fight = (attacker, defender) => {
+      defender.health -= attacker.damagePerAttack;
+      if (defender.health <= 0) return attacker.name;
+      else return fight(defender, attacker);
+    };
 
-function declareWinner(fighter1, fighter2, firstAttacker) {
-  return "Write your code here";
-}
-
-// Test block
-console.log(
-  declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Harry")
-);
-console.log(
-  declareWinner(
-    new Fighter("Harald", 20, 5),
-    new Fighter("Harry", 5, 4),
-    "Harry"
-  )
-);
-console.log(
-  declareWinner(
-    new Fighter("Harald", 20, 5),
-    new Fighter("Harry", 5, 4),
-    "Harald"
-  )
-);
+    switch (firstAttacker) {
+      case fighter1.name:
+        return fight(fighter1, fighter2);
+      default:
+        return fight(fighter2, fighter1);
+    }
+  }
+};
