@@ -1,8 +1,5 @@
 // Two fighters, one winner
 
-// Codewars
-// URL: https://www.codewars.com/kata/complementary-dna/train/javascript
-
 // from Codewars
 // URL: https://www.codewars.com/kata/two-fighters-one-winner/train/javascript
 

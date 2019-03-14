@@ -1,5 +1,8 @@
 // Complementary DNA
 
+// Codewars
+// URL: https://www.codewars.com/kata/complementary-dna/train/javascript
+
 // Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells
 // and carries the "instructions" for the development and functioning of
 // living organisms.
